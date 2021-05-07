@@ -1,0 +1,40 @@
+.social-list {
+  display: inline-flex;
+
+  &__item + &__item {
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--timing-function);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icons-color);
+    transition: fill var(--timing-function);
+  }
+
+  &__icon--color {
+    fill: #ffffff;
+    transition: fill var(--timing-function);
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: var(--white-color);
+  }
+}
